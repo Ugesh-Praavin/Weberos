@@ -8,22 +8,22 @@
 @layer base {
   :root {
     --background: 0 0% 0%;
-    --foreground: 24 89% 54%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 0%;
-    --card-foreground: 24 89% 54%;
+    --card-foreground: 0 0% 100%;
 
     --popover: 0 0% 0%;
-    --popover-foreground: 24 89% 54%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 24 89% 54%;
-    --primary-foreground: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 7%;
-    --secondary-foreground: 24 89% 54%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 24 89% 54%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
     --accent: 24 89% 54%;
     --accent-foreground: 0 0% 0%;
@@ -31,8 +31,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
     --ring: 24 89% 54%;
 
     --radius: 0.5rem;
@@ -75,9 +75,13 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-roadmap-orange via-roadmap-orange to-roadmap-orange bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent;
+}
+
+.orange-gradient {
+  @apply bg-gradient-to-r from-roadmap-orange via-roadmap-orange to-roadmap-orange/80 bg-clip-text text-transparent;
 }
 
 .glassmorphism {
-  @apply bg-black/40 backdrop-blur-md border border-roadmap-orange/10 shadow-lg;
+  @apply bg-black/70 backdrop-blur-md border border-white/10 shadow-lg;
 }

@@ -22,18 +22,18 @@ const Navbar = () => {
         <div className="flex items-center">
           <span className="text-2xl font-bold">
             <span className="text-roadmap-orange">Web</span>
-            <span className="text-roadmap-orange/80">eros</span>
+            <span className="text-white">eros</span>
           </span>
-          <span className="ml-2 text-sm font-medium text-roadmap-orange/60 hidden md:inline-block">
+          <span className="ml-2 text-sm font-medium text-white/60 hidden md:inline-block">
             Digital Studio
           </span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#services" className="car-underline font-medium text-roadmap-orange opacity-80 hover:opacity-100 transition-opacity">Services</a>
-          <a href="#process" className="car-underline font-medium text-roadmap-orange opacity-80 hover:opacity-100 transition-opacity">Process</a>
-          <a href="#about" className="car-underline font-medium text-roadmap-orange opacity-80 hover:opacity-100 transition-opacity">About</a>
+          <a href="#services" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Services</a>
+          <a href="#process" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Process</a>
+          <a href="#about" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">About</a>
           <Button className="bg-roadmap-orange hover:bg-roadmap-orange/90 text-black">
             Contact Us
           </Button>
@@ -46,7 +46,7 @@ const Navbar = () => {
             size="icon" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
-            className="text-roadmap-orange hover:bg-roadmap-orange/10"
+            className="text-white hover:bg-white/10"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -56,9 +56,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="glassmorphism px-4 py-4 animate-fade-in">
-          <a href="#services" className="block py-3 px-4 hover:bg-roadmap-orange/10 rounded-md font-medium text-roadmap-orange" onClick={() => setIsMenuOpen(false)}>Services</a>
-          <a href="#process" className="block py-3 px-4 hover:bg-roadmap-orange/10 rounded-md font-medium text-roadmap-orange" onClick={() => setIsMenuOpen(false)}>Process</a>
-          <a href="#about" className="block py-3 px-4 hover:bg-roadmap-orange/10 rounded-md font-medium text-roadmap-orange" onClick={() => setIsMenuOpen(false)}>About</a>
+          <a href="#services" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>Services</a>
+          <a href="#process" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>Process</a>
+          <a href="#about" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>About</a>
           <div className="py-3 px-4">
             <Button className="w-full bg-roadmap-orange hover:bg-roadmap-orange/90 text-black" onClick={() => setIsMenuOpen(false)}>
               Contact Us

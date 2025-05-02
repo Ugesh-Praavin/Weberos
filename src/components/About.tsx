@@ -3,67 +3,68 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
-  const carThemeItems = [
+  const webDevItems = [
     {
-      title: "Chassis",
-      description: "The website structure/framework that provides the foundation of your online presence."
+      title: "Framework",
+      description: "The foundational structure that powers your website and ensures everything runs smoothly."
     },
     {
-      title: "Engine",
-      description: "The backend functionality that powers your website and makes everything run smoothly."
+      title: "Components",
+      description: "Modular building blocks that create consistent, reusable elements across your site."
     },
     {
-      title: "Dashboard",
-      description: "The CMS or admin interface that gives you control over your content."
+      title: "Interface",
+      description: "The visual layer where users interact with your content and brand story."
     },
     {
-      title: "Wheels",
-      description: "The design elements and UI components that help your site move and engage users."
+      title: "Performance",
+      description: "Speed and efficiency optimizations that keep visitors engaged and satisfied."
     },
     {
-      title: "Paint Job",
-      description: "The color scheme and visual style that makes your brand stand out."
+      title: "Aesthetics",
+      description: "Visual design elements that establish your brand identity and emotional connection."
     },
     {
-      title: "Navigation",
+      title: "Experience",
       description: "The user journey and site architecture that guides visitors to their destination."
     }
   ];
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-black">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-roadmap-orange">RoadMap</span> Designs
+              About <span className="text-roadmap-orange">Weberos</span>
             </h2>
-            <p className="text-roadmap-gray-300 mb-6">
-              RoadMap Designs specializes in creating simple, creative, and effective websites for various client needs. 
-              Our car-themed approach emphasizes the journey of web development, where clients can "customize their ride" 
-              by selecting various components for their digital presence.
+            <p className="text-white/80 mb-6">
+              Weberos specializes in creating modern, high-performance websites that elevate brands in the 
+              digital space. Our development approach emphasizes clean design, powerful functionality, 
+              and exceptional user experience.
             </p>
-            <p className="text-roadmap-gray-300 mb-6">
-              Our mission is to create streamlined, high-performance websites that help our clients navigate the digital 
-              landscape with confidence and style. We believe in transparency, collaboration, and delivering exceptional results.
+            <p className="text-white/80 mb-6">
+              Our mission is to fuel brands one pixel at a time, creating digital experiences that 
+              captivate audiences and drive measurable results. We believe in transparency, innovation, 
+              and delivering excellence in every project.
             </p>
-            <div className="p-4 bg-roadmap-gray-100 border-l-4 border-roadmap-orange rounded">
-              <p className="italic text-roadmap-gray-300">
-                "Drive Your Digital Presence Forward"
+            <div className="p-4 bg-black border-l-4 border-roadmap-orange rounded">
+              <p className="italic text-white/90">
+                "Fueling Brands One Pixel at a Time"
               </p>
             </div>
           </div>
 
           <div>
             <h3 className="text-2xl font-bold mb-6">
-              Our Car-Themed Approach
+              Our <span className="text-roadmap-orange">Development</span> Approach
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {carThemeItems.map((item, index) => (
-                <Card key={index} className="hover-grow">
+              {webDevItems.map((item, index) => (
+                <Card key={index} className="hover-grow bg-black/50 border border-roadmap-orange/30">
                   <CardContent className="p-6">
                     <h4 className="text-lg font-bold text-roadmap-orange mb-2">{item.title}</h4>
-                    <p className="text-sm text-roadmap-gray-300">{item.description}</p>
+                    <p className="text-sm text-white/70">{item.description}</p>
                   </CardContent>
                 </Card>
               ))}
