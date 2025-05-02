@@ -5,39 +5,54 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-white to-roadmap-gray-100">
+    <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-weberos-blue/20 rounded-full filter blur-[150px] -z-10"></div>
+      <div className="absolute bottom-10 left-20 w-80 h-80 bg-weberos-accent/10 rounded-full filter blur-[120px] -z-10"></div>
+      
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 md:pr-12 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-roadmap-orange">Drive</span> Your Digital Presence Forward
+          <div className="md:w-1/2 md:pr-12 mb-10 md:mb-0 z-10">
+            <div className="mb-2 inline-block py-1 px-3 bg-white/5 rounded-full border border-weberos-blue/30">
+              <span className="text-sm font-medium text-weberos-blue">Digital Innovation Studio</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+              <span className="text-gradient">Fueling brands.</span>
+              <br />
+              <span className="text-white">One pixel at a time.</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-roadmap-gray-300 max-w-lg">
-              We create streamlined, high-performance websites tailored to move your business 
-              ahead in the digital landscape with confidence and style.
+            <p className="text-lg md:text-xl mb-8 text-white/70 max-w-lg">
+              We create modern, high-performance digital experiences that 
+              propel your brand forward in today's competitive landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-roadmap-orange hover:bg-roadmap-orange/90 text-white px-8 py-6 text-lg">
+              <Button className="bg-weberos-blue hover:bg-weberos-blue/90 text-white px-8 py-6 text-lg relative 
+                                 shadow-[0_0_15px_rgba(46,156,255,0.5)] hover:shadow-[0_0_25px_rgba(46,156,255,0.7)] 
+                                 transition-shadow">
                 View Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="border-roadmap-orange text-roadmap-orange hover:bg-roadmap-orange/10 px-8 py-6 text-lg">
+              <Button variant="outline" className="border-weberos-blue text-weberos-blue hover:bg-weberos-blue/10 px-8 py-6 text-lg">
                 Our Process
               </Button>
             </div>
           </div>
           
-          <div className="md:w-1/2 relative">
-            <div className="relative z-10 bg-white p-4 rounded-lg shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-              <div className="aspect-video bg-roadmap-gray-100 rounded overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-roadmap-gray-200/50">
-                  <div className="text-5xl font-bold text-roadmap-orange">
-                    <span className="text-roadmap-black">Road</span>Map
+          <div className="md:w-1/2 relative z-10">
+            <div className="relative glassmorphism p-1 rounded-lg animate-pulse-glow">
+              <div className="aspect-video bg-weberos-dark-200 rounded overflow-hidden p-4 flex items-center justify-center">
+                <div className="text-5xl font-bold flex flex-col items-center">
+                  <div className="flex">
+                    <span className="text-weberos-blue">Web</span>
+                    <span className="text-white">eros</span>
                   </div>
+                  <div className="w-full h-1 bg-gradient-to-r from-weberos-blue to-weberos-accent mt-2"></div>
+                  <div className="text-base text-weberos-gray-300 mt-2">DIGITAL STUDIO</div>
                 </div>
               </div>
             </div>
-            <div className="absolute top-8 right-8 w-full h-full border-4 border-roadmap-orange rounded-lg -z-10"></div>
+            <div aria-hidden="true" className="absolute -top-6 -right-6 w-32 h-32 bg-weberos-blue/10 rounded-full filter blur-xl"></div>
+            <div aria-hidden="true" className="absolute -bottom-10 -left-10 w-40 h-40 bg-weberos-accent/10 rounded-full filter blur-xl"></div>
           </div>
         </div>
       </div>

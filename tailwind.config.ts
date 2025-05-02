@@ -63,9 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				roadmap: {
-					orange: '#f27c22',
+				weberos: {
+					blue: '#2E9CFF',
+					accent: '#FF4A33',
 					black: '#000000',
+					dark: {
+						100: '#121212',
+						200: '#1E1E1E',
+						300: '#2D2D2D'
+					},
 					gray: {
 						100: '#f5f5f5',
 						200: '#e0e0e0',
@@ -114,13 +120,22 @@ export default {
 						opacity: '1',
 						transform: 'translateX(0)'
 					}
-				}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 15px 5px rgba(46, 156, 255, 0.4)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 30px 5px rgba(46, 156, 255, 0.7)' 
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'slide-in': 'slide-in 0.5s ease-out'
+				'slide-in': 'slide-in 0.5s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 			},
 			fontFamily: {
 				'montserrat': ['Montserrat', 'sans-serif'],
