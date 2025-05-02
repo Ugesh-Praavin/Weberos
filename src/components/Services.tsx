@@ -6,44 +6,44 @@ import { Code, Layout, ShoppingCart, Star } from 'lucide-react';
 const Services = () => {
   // Modern icon components
   const CompactIcon = () => (
-    <div className="w-16 h-16 bg-weberos-dark-100 rounded-lg flex items-center justify-center text-weberos-blue">
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
       <Layout className="h-8 w-8" />
     </div>
   );
 
   const SedanIcon = () => (
-    <div className="w-16 h-16 bg-weberos-dark-100 rounded-lg flex items-center justify-center text-weberos-blue">
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
       <Code className="h-8 w-8" />
     </div>
   );
 
   const SUVIcon = () => (
-    <div className="w-16 h-16 bg-weberos-dark-100 rounded-lg flex items-center justify-center text-weberos-blue">
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
       <Star className="h-8 w-8" />
     </div>
   );
 
   const CustomIcon = () => (
-    <div className="w-16 h-16 bg-weberos-dark-100 rounded-lg flex items-center justify-center text-weberos-blue">
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
       <ShoppingCart className="h-8 w-8" />
     </div>
   );
 
   return (
-    <section id="services" className="section-padding bg-weberos-dark-100 relative">
+    <section id="services" className="section-padding bg-black relative">
       {/* Background Effects */}
-      <div className="absolute top-40 right-20 w-96 h-96 bg-weberos-blue/5 rounded-full filter blur-[120px] -z-0"></div>
-      <div className="absolute bottom-20 left-10 w-80 h-80 bg-weberos-accent/5 rounded-full filter blur-[100px] -z-0"></div>
+      <div className="absolute top-40 right-20 w-96 h-96 bg-roadmap-orange/5 rounded-full filter blur-[120px] -z-0"></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-roadmap-orange/5 rounded-full filter blur-[100px] -z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block py-1 px-3 bg-white/5 rounded-full border border-weberos-blue/30 mb-3">
-            <span className="text-sm font-medium text-weberos-blue">Our Solutions</span>
+          <div className="inline-block py-1 px-3 bg-black/50 rounded-full border border-roadmap-orange/30 mb-3">
+            <span className="text-sm font-medium text-roadmap-orange">Our Solutions</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Tailored <span className="text-weberos-blue">Digital Packages</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-roadmap-orange">
+            Tailored <span className="text-roadmap-orange">Digital Packages</span>
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
+          <p className="text-roadmap-orange/70 max-w-2xl mx-auto">
             Select the perfect website solution for your journey. Each option is designed to match your specific business needs and goals.
           </p>
         </div>

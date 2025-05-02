@@ -8,32 +8,32 @@
 @layer base {
   :root {
     --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --foreground: 24 89% 54%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 24 89% 54%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 24 89% 54%;
 
-    --primary: 210 100% 59%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 24 89% 54%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 240 5% 12%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 24 89% 54%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 84%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 24 89% 54%;
 
-    --accent: 12 90% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 24 89% 54%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5% 20%;
-    --input: 240 5% 20%;
-    --ring: 210 100% 59%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 24 89% 54%;
 
     --radius: 0.5rem;
   }
@@ -67,7 +67,7 @@
 }
 
 .car-underline::after {
-  @apply content-[''] absolute w-0 h-1 bg-weberos-blue left-0 bottom-0 transition-all duration-300 ease-in-out;
+  @apply content-[''] absolute w-0 h-1 bg-roadmap-orange left-0 bottom-0 transition-all duration-300 ease-in-out;
 }
 
 .car-underline:hover::after {
@@ -75,10 +75,9 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-weberos-blue via-weberos-accent to-blue-400 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-roadmap-orange via-roadmap-orange to-roadmap-orange bg-clip-text text-transparent;
 }
 
 .glassmorphism {
-  @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-lg;
+  @apply bg-black/40 backdrop-blur-md border border-roadmap-orange/10 shadow-lg;
 }
-

@@ -63,9 +63,8 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				weberos: {
-					blue: '#2E9CFF',
-					accent: '#FF4A33',
+				roadmap: {
+					orange: '#f27c22',
 					black: '#000000',
 					dark: {
 						100: '#121212',
@@ -123,10 +122,10 @@ export default {
 				},
 				'pulse-glow': {
 					'0%, 100%': { 
-						boxShadow: '0 0 15px 5px rgba(46, 156, 255, 0.4)' 
+						boxShadow: '0 0 15px 5px rgba(242, 124, 34, 0.4)' 
 					},
 					'50%': { 
-						boxShadow: '0 0 30px 5px rgba(46, 156, 255, 0.7)' 
+						boxShadow: '0 0 30px 5px rgba(242, 124, 34, 0.7)' 
 					},
 				},
 			},
