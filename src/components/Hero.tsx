@@ -25,15 +25,19 @@ const Hero = () => {
               propel your brand forward in today's competitive landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#services">
               <Button className="bg-roadmap-orange hover:bg-roadmap-orange/90 text-black px-8 py-6 text-lg relative 
                                  shadow-[0_0_15px_rgba(242,124,34,0.5)] hover:shadow-[0_0_25px_rgba(242,124,34,0.7)] 
                                  transition-shadow">
                 View Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="border-roadmap-orange text-roadmap-orange hover:bg-roadmap-orange/10 px-8 py-6 text-lg">
+              </a>
+              <a href='#process'>
+              <Button variant="outline" className="border-roadmap-orange text-white hover:bg-roadmap-orange/10 px-8 py-6 text-lg">
                 Our Process
               </Button>
+              </a>
             </div>
           </div>
           

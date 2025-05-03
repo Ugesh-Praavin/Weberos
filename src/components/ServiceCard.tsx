@@ -43,9 +43,11 @@ const ServiceCard = ({ title, description, price, features, popular, icon }: Ser
         </div>
       </CardContent>
       <CardFooter>
+        <a href="#contact">
         <Button className={`w-full ${popular ? 'bg-roadmap-orange hover:bg-roadmap-orange/90 text-black' : 'bg-black hover:bg-black/80 text-white border border-white/30'}`}>
           Select This Package
         </Button>
+        </a>
       </CardFooter>
     </Card>
   );

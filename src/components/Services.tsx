@@ -51,7 +51,7 @@ const Services = () => {
           <ServiceCard
             title="Compact"
             description="Perfect for personal portfolios and simple landing pages"
-            price="Starting at $799"
+            price="Starting at ₹4999"
             icon={<CompactIcon />}
             features={[
               "Single page or up to 3 pages",
@@ -67,7 +67,7 @@ const Services = () => {
           <ServiceCard
             title="Sedan"
             description="Ideal for small business websites"
-            price="Starting at $1,499"
+            price="Starting at ₹14,459"
             icon={<SedanIcon />}
             popular={true}
             features={[
@@ -77,7 +77,7 @@ const Services = () => {
               "Social media integration",
               "Basic SEO optimization",
               "Google Analytics setup",
-              "CMS implementation",
+              
               "3 rounds of revisions",
               "3 months post-launch support"
             ]}
@@ -86,7 +86,7 @@ const Services = () => {
           <ServiceCard
             title="SUV"
             description="Perfect for blogs and content-heavy websites"
-            price="Starting at $2,499"
+            price="Starting at ₹29,999"
             icon={<SUVIcon />}
             features={[
               "Up to 10 pages + blog structure",
@@ -94,7 +94,6 @@ const Services = () => {
               "Contact and custom forms",
               "Social media integration",
               "Comprehensive SEO setup",
-              "Content management system",
               "Google Analytics integration",
               "Newsletter signup capability",
               "4 rounds of revisions",

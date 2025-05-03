@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -34,9 +33,13 @@ const Navbar = () => {
           <a href="#services" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Services</a>
           <a href="#process" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Process</a>
           <a href="#about" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">About</a>
-          <Button className="bg-roadmap-orange hover:bg-roadmap-orange/90 text-black">
-            Contact Us
-          </Button>
+          
+  <a href="#contact">
+    <Button className="bg-roadmap-orange hover:bg-roadmap-orange/90 text-black">
+      Contact Us
+    </Button>
+  </a>
+
         </div>
 
         {/* Mobile Menu Button */}

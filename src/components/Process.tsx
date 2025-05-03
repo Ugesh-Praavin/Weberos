@@ -78,7 +78,7 @@ const Process = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-white mb-2">{step.description}</p>
-                      <p className="text-sm font-medium text-black">{step.duration}</p>
+                      
                     </CardContent>
                   </Card>
                 </div>
