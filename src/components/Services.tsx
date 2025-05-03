@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { Code, Layout, ShoppingCart, Star } from 'lucide-react';
@@ -40,10 +39,10 @@ const Services = () => {
           <div className="inline-block py-1 px-3 bg-black/50 rounded-full border border-roadmap-orange/30 mb-3">
             <span className="text-sm font-medium text-roadmap-orange">Our Solutions</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-roadmap-orange">
-            Tailored <span className="text-roadmap-orange">Digital Packages</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Tailored <span className="text-white">Digital Packages</span>
           </h2>
-          <p className="text-roadmap-orange/70 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Select the perfect website solution for your journey. Each option is designed to match your specific business needs and goals.
           </p>
         </div>

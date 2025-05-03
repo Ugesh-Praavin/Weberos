@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -49,13 +48,13 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="section-padding bg-roadmap-gray-100">
+    <section id="process" className="section-padding bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             The <span className="text-roadmap-orange">Journey</span> to Your Website
           </h2>
-          <p className="text-roadmap-gray-300 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Our streamlined development process ensures your project stays on track from start to finish.
           </p>
         </div>
@@ -68,25 +67,25 @@ const Process = () => {
             {steps.map((step, index) => (
               <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
                 <div className="md:w-1/2 p-4 relative">
-                  <Card className={`hover-grow ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+                  <Card className={`hover-grow ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'} bg-roadmap-orange`}>
                     <CardHeader className="pb-2">
-                      <CardTitle className="flex items-center">
-                        <span className="bg-roadmap-orange text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                      <CardTitle className="flex items-center text-white">
+                        <span className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
                           {step.number}
                         </span>
                         {step.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-roadmap-gray-300 mb-2">{step.description}</p>
-                      <p className="text-sm font-medium text-roadmap-orange">{step.duration}</p>
+                      <p className="text-white mb-2">{step.description}</p>
+                      <p className="text-sm font-medium text-black">{step.duration}</p>
                     </CardContent>
                   </Card>
                 </div>
 
                 {/* Circle marker for timeline - only visible on MD and up */}
-                <div className="hidden md:flex items-center justify-center bg-white rounded-full w-10 h-10 border-4 border-roadmap-orange shadow-lg z-10">
-                  <span className="text-roadmap-orange font-bold">{step.number}</span>
+                <div className="hidden md:flex items-center justify-center bg-black rounded-full w-10 h-10 border-4 border-roadmap-orange shadow-lg z-10">
+                  <span className="text-white font-bold">{step.number}</span>
                 </div>
               </div>
             ))}

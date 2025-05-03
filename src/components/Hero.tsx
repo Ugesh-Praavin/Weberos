@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -21,7 +20,7 @@ const Hero = () => {
               <br />
               <span className="text-roadmap-orange">One pixel at a time.</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-roadmap-orange/70 max-w-lg">
+            <p className="text-lg md:text-xl mb-8 text-white max-w-lg">
               We create modern, high-performance digital experiences that 
               propel your brand forward in today's competitive landscape.
             </p>
