@@ -18,7 +18,7 @@ const Process = () => {
     {
       number: 3,
       title: "Development Phase",
-      description: "We build frontend and backend components, integrate CMS, and implement responsive design.",
+      description: "We build frontend and backend components and implement responsive design.",
       duration: "3-4 weeks"
     },
     {
