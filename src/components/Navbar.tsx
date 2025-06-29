@@ -30,9 +30,9 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#services" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Services</a>
-          <a href="#process" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Process</a>
           <a href="#about" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">About</a>
+          <a href="#team" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Team</a>
+          <a href="#services" className="car-underline font-medium text-white opacity-80 hover:opacity-100 transition-opacity">Packages</a>
           
   <a href="#contact">
     <Button className="bg-roadmap-orange hover:bg-roadmap-orange/90 text-black">
@@ -59,9 +59,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="glassmorphism px-4 py-4 animate-fade-in">
-          <a href="#services" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>Services</a>
-          <a href="#process" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>Process</a>
           <a href="#about" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>About</a>
+          <a href="#team" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>Team</a>
+          <a href="#services" className="block py-3 px-4 hover:bg-white/10 rounded-md font-medium text-white" onClick={() => setIsMenuOpen(false)}>Packages</a>
           <div className="py-3 px-4">
             <Button className="w-full bg-roadmap-orange hover:bg-roadmap-orange/90 text-black" onClick={() => setIsMenuOpen(false)}>
               Contact Us

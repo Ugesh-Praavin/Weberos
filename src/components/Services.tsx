@@ -1,123 +1,115 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ServiceCard from './ServiceCard';
-import { Code, Layout, ShoppingCart, Star } from 'lucide-react';
+import { Code, Search, Share2 } from 'lucide-react';
 
 const Services = () => {
-  // Modern icon components
-  const CompactIcon = () => (
-    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
-      <Layout className="h-8 w-8" />
-    </div>
-  );
+  const [isVisible, setIsVisible] = useState(false);
 
-  const SedanIcon = () => (
-    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('services-section');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Modern icon components
+  const WebDevIcon = () => (
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange hover-scale-rotate transition-all duration-300">
       <Code className="h-8 w-8" />
     </div>
   );
 
-  const SUVIcon = () => (
-    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
-      <Star className="h-8 w-8" />
+  const SEOIcon = () => (
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange hover-scale-rotate transition-all duration-300">
+      <Search className="h-8 w-8" />
     </div>
   );
 
-  const CustomIcon = () => (
-    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange">
-      <ShoppingCart className="h-8 w-8" />
+  const SocialMediaIcon = () => (
+    <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center text-roadmap-orange hover-scale-rotate transition-all duration-300">
+      <Share2 className="h-8 w-8" />
     </div>
   );
 
   return (
-    <section id="services" className="section-padding bg-black relative">
+    <section id="services-section" className="section-padding bg-black relative">
       {/* Background Effects */}
-      <div className="absolute top-40 right-20 w-96 h-96 bg-roadmap-orange/5 rounded-full filter blur-[120px] -z-0"></div>
-      <div className="absolute bottom-20 left-10 w-80 h-80 bg-roadmap-orange/5 rounded-full filter blur-[100px] -z-0"></div>
+      <div className="absolute top-40 right-20 w-96 h-96 bg-roadmap-orange/5 rounded-full filter blur-[120px] -z-0 animate-float"></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-roadmap-orange/5 rounded-full filter blur-[100px] -z-0 animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-block py-1 px-3 bg-black/50 rounded-full border border-roadmap-orange/30 mb-3">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-block py-1 px-3 bg-black/50 rounded-full border border-roadmap-orange/30 mb-3 animate-slide-in-bottom">
             <span className="text-sm font-medium text-roadmap-orange">Our Solutions</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Tailored <span className="text-white">Digital Packages</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white animate-fade-in-up">
+            Tailored <span className="text-roadmap-orange animate-glow">Digital Packages</span>
           </h2>
-          <p className="text-white max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto animate-slide-in-bottom stagger-1">
             Select the perfect website solution for your journey. Each option is designed to match your specific business needs and goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <ServiceCard
-            title="Compact"
-            description="Perfect for personal portfolios and simple landing pages"
-            price="Starting at ₹4999"
-            icon={<CompactIcon />}
-            features={[
-              "Single page or up to 3 pages",
-              "Responsive design",
-              "Contact form",
-              "Basic SEO setup",
-              "2 rounds of revisions",
-              "Hosting setup assistance",
-              "1 month post-launch support"
-            ]}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: '0.1s' }}>
+            <ServiceCard
+              title="SEO & SEM Management"
+              description="Boost your online visibility and drive organic traffic"
+              price="Custom Quote"
+              icon={<SEOIcon />}
+              features={[
+                "Google Analytics",
+                "Monthly Detailed Reporting",
+                "Keyword Research",
+                "Content Optimization",
+                "Search Engine Submission"
+              ]}
+            />
+          </div>
           
-          <ServiceCard
-            title="Sedan"
-            description="Ideal for small business websites"
-            price="Starting at ₹14,459"
-            icon={<SedanIcon />}
-            popular={true}
-            features={[
-              "Up to 5-7 pages",
-              "Responsive design",
-              "Contact forms",
-              "Social media integration",
-              "Basic SEO optimization",
-              "Google Analytics setup",
-              
-              "3 rounds of revisions",
-              "3 months post-launch support"
-            ]}
-          />
+          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: '0.3s' }}>
+            <ServiceCard
+              title="Web Design & Development"
+              description="Complete website solutions from concept to launch"
+              price="Custom Quote"
+              icon={<WebDevIcon />}
+              popular={true}
+              features={[
+                "Responsive Design",
+                "Static or Interactive",
+                "Domain Management",
+                "Hosting",
+                "Email Setup",
+                "Database Design"
+              ]}
+            />
+          </div>
           
-          <ServiceCard
-            title="SUV"
-            description="Perfect for blogs and content-heavy websites"
-            price="Starting at ₹29,999"
-            icon={<SUVIcon />}
-            features={[
-              "Up to 10 pages + blog structure",
-              "Advanced responsive design",
-              "Contact and custom forms",
-              "Social media integration",
-              "Comprehensive SEO setup",
-              "Google Analytics integration",
-              "Newsletter signup capability",
-              "4 rounds of revisions",
-              "6 months post-launch support"
-            ]}
-          />
-          
-          <ServiceCard
-            title="Custom Build"
-            description="For specialized websites with unique requirements"
-            price="Custom Quote"
-            icon={<CustomIcon />}
-            features={[
-              "Custom number of pages",
-              "Custom functionality development",
-              "E-commerce capabilities",
-              "Advanced integrations",
-              "Custom animations",
-              "Comprehensive SEO strategy",
-              "Training sessions for client team",
-              "Unlimited revisions (within scope)",
-              "12 months post-launch support"
-            ]}
-          />
+          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: '0.5s' }}>
+            <ServiceCard
+              title="Social Media Marketing"
+              description="Build your brand presence across all social platforms"
+              price="Custom Quote"
+              icon={<SocialMediaIcon />}
+              features={[
+                "Account Management/Setup",
+                "Social Strategy",
+                "Twitter, LinkedIn",
+                "Pinterest, Instagram, etc."
+              ]}
+            />
+          </div>
         </div>
       </div>
     </section>

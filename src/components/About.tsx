@@ -1,70 +1,97 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
-  const webDevItems = [
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('about-section');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const approachItems = [
     {
-      title: "Framework",
-      description: "The foundational structure that powers your website and ensures everything runs smoothly."
+      title: "Learning",
+      description: "Every project is an opportunity to grow, learn new technologies, and expand our skills."
     },
     {
-      title: "Components",
-      description: "Modular building blocks that create consistent, reusable elements across your site."
+      title: "Innovation",
+      description: "We bring fresh perspectives and creative solutions, just like we did in those late-night study sessions."
     },
     {
-      title: "Interface",
-      description: "The visual layer where users interact with your content and brand story."
+      title: "Passion",
+      description: "Our love for tech and creativity drives us to deliver exceptional results for every client."
     },
     {
-      title: "Performance",
-      description: "Speed and efficiency optimizations that keep visitors engaged and satisfied."
+      title: "Growth",
+      description: "We're constantly evolving, just like we did from college students to professional developers."
     },
     {
-      title: "Aesthetics",
-      description: "Visual design elements that establish your brand identity and emotional connection."
+      title: "Impact",
+      description: "We focus on making a real difference, helping others build their digital presence."
     },
     {
       title: "Experience",
-      description: "The user journey and site architecture that guides visitors to their destination."
+      description: "Building websites isn't just about code—it's about creating meaningful digital experiences."
     }
   ];
 
   return (
-    <section id="about" className="section-padding bg-black">
+    <section id="about-section" className="section-padding bg-black">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-roadmap-orange">Weberos</span>
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-up">
+              About <span className="text-roadmap-orange animate-glow">Weberos</span>
             </h2>
-            <p className="text-white/80 mb-6">
-              Weberos specializes in creating modern, high-performance websites that elevate brands in the 
-              digital space. Our development approach emphasizes clean design, powerful functionality, 
-              and exceptional user experience.
+            <p className={`text-white/80 mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              Weberos started as a spark between college students who shared a passion for tech and creativity. In between lectures and late-night study sessions, we realized our free time could be more than just downtime; it could be our future. That's when Weberos was born.
             </p>
-            <p className="text-white/80 mb-6">
-              Our mission is to fuel brands one pixel at a time, creating digital experiences that 
-              captivate audiences and drive measurable results. We believe in transparency, innovation, 
-              and delivering excellence in every project.
+            <p className={`text-white/80 mb-6 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              What began as a simple idea to build websites for fun quickly grew into a mission to help others build their digital place. Today, we offer services like website development, SEO, and branding each project helping us learn, grow, and make an impact. We're not just building websites, we're building experience, one pixel at a time.
             </p>
-            <div className="p-4 bg-black border-l-4 border-roadmap-orange rounded">
+            <div className={`p-4 bg-black border-l-4 border-roadmap-orange rounded transition-all duration-1000 delay-600 hover-lift hover-glow ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <p className="italic text-white/90">
                 "Fueling Brands One Pixel at a Time"
               </p>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold mb-6">
-              Our <span className="text-roadmap-orange">Development</span> Approach
+          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
+            <h3 className="text-2xl font-bold mb-6 animate-fade-in-up">
+              Our <span className="text-roadmap-orange animate-glow">Approach</span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {webDevItems.map((item, index) => (
-                <Card key={index} className="hover-grow bg-black/50 border border-roadmap-orange/30">
+              {approachItems.map((item, index) => (
+                <Card 
+                  key={index} 
+                  className={`hover-lift hover-glow bg-black/50 border border-roadmap-orange/30 group transition-all duration-500 ${
+                    isVisible 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-20'
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
                   <CardContent className="p-6">
-                    <h4 className="text-lg font-bold text-roadmap-orange mb-2">{item.title}</h4>
-                    <p className="text-sm text-white/70">{item.description}</p>
+                    <h4 className="text-lg font-bold text-roadmap-orange mb-2 group-hover:scale-105 transition-transform duration-300">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors duration-300">
+                      {item.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
