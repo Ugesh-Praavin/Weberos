@@ -17,7 +17,7 @@ const ServiceCard = ({ title, description, price, features, popular, icon }: Ser
 
   return (
     <Card 
-      className={`hover-lift hover-glow overflow-hidden border-white/10 bg-black/50 backdrop-blur-sm transition-all duration-500 group
+      className={`hover-lift hover-glow overflow-hidden border-white/10 backdrop-blur-sm transition-all duration-500 group
                    ${popular ? 'border-roadmap-orange border-2 relative' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -69,7 +69,7 @@ const ServiceCard = ({ title, description, price, features, popular, icon }: Ser
         <Button className={`w-full group/btn transition-all duration-300 ${
           popular 
             ? 'bg-roadmap-orange hover:bg-roadmap-orange/90 text-black hover:shadow-[0_0_20px_rgba(242,124,34,0.5)]' 
-            : 'bg-black hover:bg-black/80 text-white border border-white/30 hover:border-roadmap-orange/50'
+            : 'bg-roadmap-orange/20 hover:bg-roadmap-orange/30 text-white border border-roadmap-orange/30 hover:border-roadmap-orange/50'
         }`}>
           <span className="group-hover/btn:translate-x-1 transition-transform duration-300">
             Select This Package

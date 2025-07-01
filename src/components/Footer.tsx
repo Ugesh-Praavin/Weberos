@@ -17,30 +17,81 @@ const Footer = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Services</h3>
-              <ul className="space-y-2">
-                <li><a href="#services" className="text-white/80 hover:text-white transition-colors">Compact</a></li>
-                <li><a href="#services" className="text-white/80 hover:text-white transition-colors">Sedan</a></li>
-                <li><a href="#services" className="text-white/80 hover:text-white transition-colors">SUV</a></li>
-                <li><a href="#services" className="text-white/80 hover:text-white transition-colors">Custom Build</a></li>
+              <h3 className="text-lg font-bold mb-4 text-white">Our Services</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#services" className="text-white/80 hover:text-roadmap-orange transition-colors group">
+                    <div className="font-medium group-hover:text-roadmap-orange">Web Design & Development</div>
+                    <div className="text-sm text-white/60">Complete website solutions</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="text-white/80 hover:text-roadmap-orange transition-colors group">
+                    <div className="font-medium group-hover:text-roadmap-orange">SEO & SEM Management</div>
+                    <div className="text-sm text-white/60">Boost online visibility</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="text-white/80 hover:text-roadmap-orange transition-colors group">
+                    <div className="font-medium group-hover:text-roadmap-orange">Social Media Marketing</div>
+                    <div className="text-sm text-white/60">Build brand presence</div>
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="#process" className="text-white/80 hover:text-white transition-colors">Process</a></li>
-                <li><a href="#about" className="text-white/80 hover:text-white transition-colors">About</a></li>
-                <li><a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a></li>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#about" className="text-white/80 hover:text-roadmap-orange transition-colors font-medium">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#team" className="text-white/80 hover:text-roadmap-orange transition-colors font-medium">
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="text-white/80 hover:text-roadmap-orange transition-colors font-medium">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-white/80 hover:text-roadmap-orange transition-colors font-medium">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Connect</h3>
-              <ul className="space-y-2">
-              
-                <li><a href="https://www.instagram.com/weberos_tbm/" className="text-white/80 hover:text-white transition-colors">Instagram</a></li>
-                
+              <h3 className="text-lg font-bold mb-4 text-white">Connect With Us</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a 
+                    href="https://www.instagram.com/weberos_tbm/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-white/80 hover:text-roadmap-orange transition-colors font-medium flex items-center"
+                  >
+                    <span>Instagram</span>
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-white/80 hover:text-roadmap-orange transition-colors font-medium">
+                    Get Quote
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:contact@weberos.com" className="text-white/80 hover:text-roadmap-orange transition-colors font-medium">
+                    Email Us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -53,8 +104,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Weberos. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Privacy Policy</a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Terms of Service</a>
+            <a href="#" className="text-white/60 hover:text-roadmap-orange transition-colors text-sm">Privacy Policy</a>
+            <a href="#" className="text-white/60 hover:text-roadmap-orange transition-colors text-sm">Terms of Service</a>
           </div>
         </div>
       </div>

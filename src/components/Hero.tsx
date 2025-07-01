@@ -19,13 +19,13 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className={`md:w-1/2 md:pr-12 mb-10 md:mb-0 z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
-            <div className="mb-2 inline-block py-1 px-3 bg-black/50 rounded-full border border-roadmap-orange/30 animate-slide-in-bottom">
+            <div className="mb-2 inline-block py-1 px-3 rounded-full border border-roadmap-orange/30 animate-slide-in-bottom">
               <span className="text-sm font-medium text-roadmap-orange">Digital Innovation Studio</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
               <span className="text-gradient">Fueling brands.</span>
               <br />
-              <span className="text-roadmap-orange animate-glow">One pixel at a time.</span>
+              <span className="text-roadmap-orange">One pixel at a time.</span>
             </h1>
             <p className={`text-lg md:text-xl mb-8 text-white max-w-lg transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               We create modern, high-performance digital experiences that 
@@ -45,10 +45,10 @@ const Hero = () => {
           
           <div className={`md:w-1/2 relative z-10 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
             <div className="relative glassmorphism p-1 rounded-lg animate-pulse-glow hover-scale-rotate transition-all duration-500">
-              <div className="aspect-video bg-black rounded overflow-hidden p-4 flex items-center justify-center">
+              <div className="aspect-video rounded overflow-hidden p-4 flex items-center justify-center">
                 <div className="text-5xl font-bold flex flex-col items-center">
                   <div className="flex animate-fade-in-up">
-                    <span className="text-roadmap-orange animate-glow">Web</span>
+                    <span className="text-roadmap-orange">Web</span>
                     <span className="text-roadmap-orange/80">eros</span>
                   </div>
                   <div className="w-full h-1 bg-gradient-to-r from-roadmap-orange to-roadmap-orange/50 mt-2 animate-slide-in-bottom"></div>
